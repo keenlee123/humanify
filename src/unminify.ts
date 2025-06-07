@@ -28,6 +28,9 @@ export async function unminify(
       Promise.resolve(code)
     );
 
+    // 等待5秒 1
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
     verbose.log("Input: ", code);
     verbose.log("Output: ", formattedCode);
 
